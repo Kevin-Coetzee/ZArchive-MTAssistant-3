@@ -18,24 +18,24 @@ const HeaderContent = () => (
       </div>
       <ul className="header-menu nav">
         <li className="nav-item">
-          <a href="javascript:void(0);" className="nav-link">
+          <a className="nav-link">
             <i className="nav-link-icon fa fa-database"> </i>
             Statistics
           </a>
         </li>
         <li className="btn-group nav-item">
-          <a href="javascript:void(0);" className="nav-link">
+          <a className="nav-link">
             <i className="nav-link-icon fa fa-edit"></i>
             Projects
           </a>
         </li>
         <li className="dropdown nav-item">
-          <a href="javascript:void(0);" className="nav-link">
+          <a className="nav-link">
             <i className="nav-link-icon fa fa-cog"></i>
             Settings
           </a>
         </li>
-      </ul>{" "}
+      </ul>
     </div>
     <div className="app-header-right">
       <div className="header-btn-lg pr-0">
@@ -58,25 +58,22 @@ const HeaderContent = () => (
                   <i className="fa fa-angle-down ml-2 opacity-8"></i>
                 </a>
                 <div
-                  tabindex="-1"
                   role="menu"
                   aria-hidden="true"
                   className="dropdown-menu dropdown-menu-right"
                 >
-                  <button type="button" tabindex="0" className="dropdown-item">
+                  <button type="button" className="dropdown-item">
                     User Account
                   </button>
-                  <button type="button" tabindex="0" className="dropdown-item">
+                  <button type="button" className="dropdown-item">
                     Settings
                   </button>
-                  <h6 tabindex="-1" className="dropdown-header">
-                    Header
-                  </h6>
-                  <button type="button" tabindex="0" className="dropdown-item">
+                  <h6 className="dropdown-header">Header</h6>
+                  <button type="button" className="dropdown-item">
                     Actions
                   </button>
-                  <div tabindex="-1" className="dropdown-divider"></div>
-                  <button type="button" tabindex="0" className="dropdown-item">
+                  <div className="dropdown-divider"></div>
+                  <button type="button" className="dropdown-item">
                     Dividers
                   </button>
                 </div>
@@ -96,7 +93,7 @@ const HeaderContent = () => (
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   </div>
 );

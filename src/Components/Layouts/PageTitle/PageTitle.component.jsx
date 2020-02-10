@@ -36,14 +36,13 @@ const PageTitle = ({ icon, title, desc, visible }) => (
             Buttons
           </button>
           <div
-            tabindex="-1"
             role="menu"
             aria-hidden="true"
             className="dropdown-menu dropdown-menu-right"
           >
             <ul className="nav flex-column">
               <li className="nav-item">
-                <a href="javascript:void(0);" className="nav-link">
+                <a className="nav-link">
                   <i className="nav-link-icon lnr-inbox"></i>
                   <span>Inbox</span>
                   <div className="ml-auto badge badge-pill badge-secondary">
@@ -52,24 +51,20 @@ const PageTitle = ({ icon, title, desc, visible }) => (
                 </a>
               </li>
               <li className="nav-item">
-                <a href="javascript:void(0);" className="nav-link">
+                <a className="nav-link">
                   <i className="nav-link-icon lnr-book"></i>
                   <span>Book</span>
                   <div className="ml-auto badge badge-pill badge-danger">5</div>
                 </a>
               </li>
               <li className="nav-item">
-                <a href="javascript:void(0);" className="nav-link">
+                <a className="nav-link">
                   <i className="nav-link-icon lnr-picture"></i>
                   <span>Picture</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  disabled
-                  href="javascript:void(0);"
-                  className="nav-link disabled"
-                >
+                <a disabled className="nav-link disabled">
                   <i className="nav-link-icon lnr-file-empty"></i>
                   <span>File Disabled</span>
                 </a>
