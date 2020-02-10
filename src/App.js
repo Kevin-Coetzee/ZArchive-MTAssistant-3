@@ -1,6 +1,9 @@
 import React from "react";
-import HomePage from "./Pages/Home/HomeDirectory.component";
 
-const App = () => <HomePage />;
+import MainPage from "./Pages/MainPage.component";
+
+function App() {
+  return <MainPage />;
+}
 
 export default App;

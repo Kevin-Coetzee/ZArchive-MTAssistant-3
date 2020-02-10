@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-import PropertyMenuItem from "../../Components/Elements/Cards/PropertyCard/PropertyMenuCard.component";
+import MenuItem from "../../Components/Elements/Card/MenuCard.component";
+import PageTitle from "../../Components/Layouts/PageTitle/PageTitle.component";
 
-import "./HomeDirectory.styles.scss";
+import "./HomePage.styles.scss";
 
-const HomeContent = () => {
+const HomePage = props => {
   const [sections, setSections] = useState([
     {
       title: "Document Templates",
@@ -49,18 +50,21 @@ const HomeContent = () => {
     },
   ]);
   return (
-    <div className="directory-menu">
-      {sections.map(({ title, imageUrl, id, size, linkTitle }) => (
-        <PropertyMenuItem
-          title={title}
-          subtitle="-"
-          imageUrl={imageUrl}
-          size={size}
-          linkTitle={linkTitle}
-        />
-      ))}
+    <div className="app-main__inner">
+      <PageTitle {...props}></PageTitle>
+      <div className="directory-menu">
+        {sections.map(({ title, imageUrl, id, size, linkTitle }) => (
+          <MenuItem
+            title={title}
+            subtitle="-"
+            imageUrl={imageUrl}
+            size={size}
+            linkTitle={linkTitle}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default HomeContent;
+export default HomePage;

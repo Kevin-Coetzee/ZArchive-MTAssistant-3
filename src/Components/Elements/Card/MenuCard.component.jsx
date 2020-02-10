@@ -1,8 +1,8 @@
 import React from "react";
 
-import "../PropertyCard/PropertyMenuCard.styles.scss";
+import "./MenuCard.styles.scss";
 
-const PropertyMenuCard = ({ title, imageUrl, size, linkTitle }) => (
+const MenuCard = ({ title, imageUrl, size, linkTitle }) => (
   <div className={`${size} property-menu-item`}>
     <div
       className="background-image"
@@ -17,4 +17,4 @@ const PropertyMenuCard = ({ title, imageUrl, size, linkTitle }) => (
   </div>
 );
 
-export default PropertyMenuCard;
+export default MenuCard;
