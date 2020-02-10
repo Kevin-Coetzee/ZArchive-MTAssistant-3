@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import MenuItem from "../../Components/Elements/Card/MenuCard.component";
-import PageTitle from "../../Components/Layouts/PageTitle/PageTitle.component";
+import PageWrapper from "../../Components/Layouts/PageWrapper/PageWrapper.component";
 
 import "./HomePage.styles.scss";
 
@@ -50,20 +50,13 @@ const HomePage = props => {
     },
   ]);
   return (
-    <div className="app-main__inner">
-      <PageTitle {...props}></PageTitle>
+    <PageWrapper {...props}>
       <div className="directory-menu">
-        {sections.map(({ title, imageUrl, id, size, linkTitle }) => (
-          <MenuItem
-            title={title}
-            subtitle="-"
-            imageUrl={imageUrl}
-            size={size}
-            linkTitle={linkTitle}
-          />
+        {sections.map(({ id, ...otherProps }) => (
+          <MenuItem key={id} {...otherProps} />
         ))}
       </div>
-    </div>
+    </PageWrapper>
   );
 };
 

@@ -6,6 +6,7 @@ import MainSideBar from "../Components/Layouts/SideBar/MainSideBar/MainSideBar.c
 import PageFooter from "../Components/Layouts/PageFooter/PageFooter.component";
 
 import HomePage from "./HomePage/HomePage.component";
+import KingdomHalls from "./KingdomHalls/KingdomHalls.component";
 
 const MainPage = () => {
   return (
@@ -27,6 +28,17 @@ const MainPage = () => {
                   icon="pe-7s-tools"
                   title="MT Assistant Dashboard"
                   desc="This is the Landing Page of the MT Assistant"
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/property/KingdomHalls"
+              render={props => (
+                <KingdomHalls
+                  icon="pe-7s-tools"
+                  title="Kingdom Halls"
+                  desc="View all assigned Kingdom Halls"
                 />
               )}
             />

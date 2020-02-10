@@ -1,9 +1,21 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
 import "./MenuCard.styles.scss";
 
-const MenuCard = ({ title, imageUrl, size, linkTitle }) => (
-  <div className={`${size} property-menu-item`}>
+const MenuCard = ({
+  title,
+  imageUrl,
+  size,
+  linkTitle,
+  history,
+  linkUrl,
+  match,
+}) => (
+  <div
+    className={`${size} property-menu-item`}
+    onClick={() => history.push(`${match.url}${linkUrl}`)}
+  >
     <div
       className="background-image"
       style={{
@@ -17,4 +29,4 @@ const MenuCard = ({ title, imageUrl, size, linkTitle }) => (
   </div>
 );
 
-export default MenuCard;
+export default withRouter(MenuCard);
